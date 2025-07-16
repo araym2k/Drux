@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRUX – Design Dein Sein</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-black text-white p-6 shadow-md">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div>
+          <h1 class="text-2xl font-bold">
+            DRU<span class="text-red-600">X</span>
+          </h1>
+          <p class="text-sm text-gray-300 -mt-1">Design Dein Sein</p>
+        </div>
+        <nav class="space-x-6">
+          <a href="#angebot" class="hover:text-gray-300">Angebot</a>
+          <a href="#galerie" class="hover:text-gray-300">Galerie</a>
+          <a href="#ueber-uns" class="hover:text-gray-300">Über uns</a>
+          <a href="#kontakt" class="hover:text-gray-300">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20 bg-gray-100">
+      <h2 class="text-4xl font-extrabold mb-4">Dein Print. Dein Style. Dein Look.</h2>
+      <p class="text-xl text-gray-700">Individueller T-Shirt-Druck mit Stil und Qualität</p>
+    </section>
+
+    <!-- Angebot -->
+    <section id="angebot" class="py-16 max-w-5xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-8 text-center">Unser Angebot</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg">
+          <h4 class="text-xl font-semibold mb-2">T-Shirt-Druck</h4>
+          <p>Individuelle Designs, Text oder Logos auf hochwertigen Textilien.</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg">
+          <h4 class="text-xl font-semibold mb-2">Eigene Motive</h4>
+          <p>Du hast ein eigenes Design? Wir drucken es präzise und langlebig.</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg">
+          <h4 class="text-xl font-semibold mb-2">Mehr als Shirts</h4>
+          <p>Auch Hoodies, Beutel, Mützen und mehr – frag uns einfach an!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galerie -->
+    <section id="galerie" class="bg-gray-50 py-16 px-4">
+      <h3 class="text-3xl font-semibold mb-8 text-center">Galerie</h3>
+      <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <a href="shirt1.jpg" target="_blank"><img src="shirt1.jpg" alt="Shirt 1" class="h-48 w-full object-cover rounded-xl" /></a>
+        <div class="bg-gray-200 h-48 rounded-xl"></div>
+        <div class="bg-gray-200 h-48 rounded-xl"></div>
+      </div>
+    </section>
+
+    <!-- Über uns -->
+    <section id="ueber-uns" class="py-16 max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6 text-center">Über uns</h3>
+      <p class="text-lg text-center text-gray-700">
+        "DRUX" ist dein Partner für kreativen, hochwertigen Textildruck. Mit Leidenschaft und
+        Liebe zum Detail bringen wir deine Ideen auf Stoff – ganz egal ob Einzelstück oder größere
+        Auflagen.
+      </p>
+    </section>
+
+    <!-- Kontaktformular -->
+    <section id="kontakt" class="bg-gray-100 py-16 px-4">
+      <h3 class="text-3xl font-semibold mb-8 text-center">Kontakt</h3>
+      <form class="max-w-xl mx-auto space-y-6">
+        <div>
+          <label class="block mb-2 font-medium">Name</label>
+          <input type="text" class="w-full border border-gray-300 rounded-xl p-3" required />
+        </div>
+        <div>
+          <label class="block mb-2 font-medium">E-Mail</label>
+          <input type="email" class="w-full border border-gray-300 rounded-xl p-3" required />
+        </div>
+        <div>
+          <label class="block mb-2 font-medium">Nachricht</label>
+          <textarea class="w-full border border-gray-300 rounded-xl p-3 h-32" required></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition"
+        >
+          Absenden
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center p-6 mt-10">
+      <p>&copy; 2025 DRUX. Alle Rechte vorbehalten.</p>
+    </footer>
+  </body>
+</html>
