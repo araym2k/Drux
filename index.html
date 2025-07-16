@@ -123,23 +123,34 @@
       ></textarea>
     </div>
 
-    <!-- Optional: Weiterleitung nach Absenden -->
-    <input
-      type="hidden"
-      name="_redirect"
-      value="https://drux.netlify.app/danke.html"
-    />
+    <!-- DSGVO Checkbox -->
+  <div class="text-sm text-gray-600">
+    <label class="inline-flex items-start space-x-2">
+      <input type="checkbox" required class="mt-1" />
+      <span>
+        Ich habe die <a href="/datenschutz.html" class="underline">Datenschutzerklärung</a> gelesen und akzeptiere sie.
+      </span>
+    </label>
+  </div>
 
-    <!-- Spam-Schutz -->
-    <input type="text" name="_formsubmit_id" style="display:none" />
+  <!-- Optional: Weiterleitung -->
+  <input
+    type="hidden"
+    name="_redirect"
+    value="https://drux.netlify.app/danke.html"
+  />
 
-    <button
-      type="submit"
-      class="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition"
-    >
-      Absenden
-    </button>
-  </form>
+  <!-- Spam-Schutz -->
+  <input type="text" name="_formsubmit_id" style="display:none" />
+
+  <!-- Absende-Button -->
+  <button
+    type="submit"
+    class="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition"
+  >
+    Absenden
+  </button>
+</form>
 </section>
 
 
