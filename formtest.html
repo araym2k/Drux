@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Formular-Test – DRUX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen px-4">
+  <h1 class="text-2xl font-bold mb-6">Testformular für Netlify Forms</h1>
+
+  <form name="kontakt" method="POST" data-netlify="true" enctype="multipart/form-data" action="/danke.html" class="space-y-4 w-full max-w-md bg-white p-6 rounded-xl shadow">
+    <input type="hidden" name="form-name" value="kontakt" />
+
+    <input type="text" name="name" placeholder="Name" required class="w-full border p-2 rounded" />
+    <input type="email" name="email" placeholder="E-Mail" required class="w-full border p-2 rounded" />
+    <input type="file" name="upload" class="w-full border p-2 rounded" />
+    <textarea name="message" placeholder="Nachricht" required class="w-full border p-2 rounded"></textarea>
+
+    <button type="submit" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">Absenden</button>
+  </form>
+</body>
+</html>
