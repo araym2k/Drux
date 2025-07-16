@@ -170,13 +170,7 @@
 <section id="kontakt" class="bg-gray-100 py-16 px-4">
   <h3 class="text-3xl font-semibold mb-8 text-center">Kontakt</h3>
 
-  <!-- Erfolgsnachricht -->
-  <div id="form-success" class="hidden max-w-xl mx-auto mb-6 text-green-600 bg-green-100 border border-green-300 rounded-xl p-4 text-center">
-    ✅ Danke für deine Nachricht! Ich melde mich schnellstmöglich bei dir.
-  </div>
-
   <form
-    id="kontaktformular"
     action="https://formspree.io/f/mjkovllp"
     method="POST"
     enctype="multipart/form-data"
@@ -210,45 +204,21 @@
     <div class="text-sm text-gray-600">
       <label class="inline-flex items-start space-x-2">
         <input type="checkbox" required class="mt-1" />
-        <span>Ich habe die <a href="/datenschutz.html" class="underline">Datenschutzerklärung</a> gelesen und akzeptiere sie.</span>
+        <span>
+          Ich habe die <a href="/datenschutz.html" class="underline">Datenschutzerklärung</a> gelesen und akzeptiere sie.
+        </span>
       </label>
     </div>
+
+    <!-- Weiterleitung nach Absenden -->
+    <input type="hidden" name="_redirect" value="https://drux.netlify.app/danke.html" />
 
     <!-- Absenden -->
     <button type="submit" class="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">
       Absenden
     </button>
   </form>
-
-  <!-- JS für Bestätigung -->
-  <script>
-    const form = document.getElementById('kontaktformular');
-    const successMessage = document.getElementById('form-success');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          Accept: "application/json"
-        }
-      });
-
-      if (response.ok) {
-        form.reset();
-        successMessage.classList.remove('hidden');
-        form.classList.add('hidden');
-      } else {
-        alert("Beim Absenden ist ein Fehler aufgetreten. Bitte versuche es später erneut.");
-      }
-    });
-  </script>
 </section>
-
 
 
 
