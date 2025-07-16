@@ -167,60 +167,14 @@
     
 
 <!-- Kontaktformular -->
-<section id="kontakt" class="bg-gray-100 py-16 px-4">
-  <h3 class="text-3xl font-semibold mb-8 text-center">Kontakt</h3>
-
-  <form
-    name="kontakt"
-    method="POST"
-    data-netlify="true"
-    enctype="multipart/form-data"
-    action="/danke.html"
-    class="max-w-xl mx-auto space-y-6"
-  >
-    <!-- erforderlich für Netlify-Forms -->
-    <input type="hidden" name="form-name" value="kontakt" />
-
-    <!-- Name -->
-    <div>
-      <label for="name" class="block mb-2 font-medium">Name</label>
-      <input id="name" name="name" type="text" required class="w-full border border-gray-300 rounded-xl p-3" />
-    </div>
-
-    <!-- E-Mail -->
-    <div>
-      <label for="email" class="block mb-2 font-medium">E-Mail</label>
-      <input id="email" name="email" type="email" required class="w-full border border-gray-300 rounded-xl p-3" />
-    </div>
-
-    <!-- Datei-Upload -->
-    <div>
-      <label for="upload" class="block mb-2 font-medium">Datei anhängen (z. B. PNG, JPG, PDF)</label>
-      <input id="upload" name="upload" type="file" accept=".jpg,.jpeg,.png,.pdf" class="w-full border border-gray-300 rounded-xl p-3" />
-    </div>
-
-    <!-- Nachricht -->
-    <div>
-      <label for="message" class="block mb-2 font-medium">Nachricht</label>
-      <textarea id="message" name="message" required class="w-full border border-gray-300 rounded-xl p-3 h-32"></textarea>
-    </div>
-
-    <!-- DSGVO Checkbox -->
-    <div class="text-sm text-gray-600">
-      <label class="inline-flex items-start space-x-2">
-        <input type="checkbox" required class="mt-1" />
-        <span>
-          Ich habe die <a href="/datenschutz.html" class="underline">Datenschutzerklärung</a> gelesen und akzeptiere sie.
-        </span>
-      </label>
-    </div>
-
-    <!-- Absenden -->
-    <button type="submit" class="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">
-      Absenden
-    </button>
-  </form>
-</section>
+<form name="kontakt" method="POST" data-netlify="true" enctype="multipart/form-data">
+  <input type="hidden" name="form-name" value="kontakt" />
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
+  <input type="file" name="upload" />
+  <button type="submit">Absenden</button>
+</form>
 
 
 
