@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRUX – Handbedruckte T-Shirts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .wave {
+      position: relative;
+    }
+    .wave::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: url('wave-top.svg') no-repeat bottom center;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body class="bg-[#1F1F1F] text-white">
+  <!-- Header -->
+  <header class="bg-[#1F1F1F] shadow p-4 flex justify-between items-center">
+    <img src="logo.png" alt="DRUX Logo" class="h-10" />
+    <nav class="space-x-4">
+      <a href="#galerie" class="hover:text-[#4A6C82]">Galerie</a>
+      <a href="#kundenstimmen" class="hover:text-[#4A6C82]">Kunden</a>
+      <a href="#faq" class="hover:text-[#4A6C82]">FAQ</a>
+      <a href="#kontakt" class="hover:text-[#4A6C82]">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative h-[90vh] wave bg-[#1F1F1F]">
+    <img src="hero-wide.jpg" alt="Handdruck Szene" class="absolute inset-0 w-full h-full object-cover opacity-60">
+    <div class="absolute inset-0 flex items-center justify-center text-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow">Handbedruckte T-Shirts. Mit Seele.</h1>
+        <a href="#kontakt" class="bg-[#4A6C82] hover:bg-[#3a5666] text-white px-6 py-3 rounded-full shadow-lg">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section id="galerie" class="bg-[#3D3D3D] py-12 px-6">
+    <h2 class="text-3xl font-bold text-center mb-6">Galerie</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="shirt1.jpg" target="_blank"><img src="shirt1.jpg" alt="Shirt 1" class="rounded shadow" /></a>
+      <a href="shirt2.jpg" target="_blank"><img src="shirt2.jpg" alt="Shirt 2" class="rounded shadow" /></a>
+      <a href="shirt3.jpg" target="_blank"><img src="shirt3.jpg" alt="Shirt 3" class="rounded shadow" /></a>
+      <a href="shirt4.jpg" target="_blank"><img src="shirt4.jpg" alt="Shirt 4" class="rounded shadow" /></a>
+    </div>
+  </section>
+
+  <!-- Kundenstimmen -->
+  <section id="kundenstimmen" class="bg-white text-black py-12 px-6">
+    <h2 class="text-3xl font-bold text-center mb-6">Kundenstimmen</h2>
+    <div class="space-y-6 max-w-2xl mx-auto">
+      <div class="bg-gray-100 p-4 rounded shadow">
+        <div class="text-yellow-400">★★★★★</div>
+        <p>„Super Qualität und tolle Beratung. Ich liebe mein Shirt!“ – Jana M.</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded shadow">
+        <div class="text-yellow-400">★★★★★</div>
+        <p>„Der Druck ist genau wie gewünscht, handgemacht mit Stil.“ – Tom R.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="bg-[#F2F2F2] text-black py-12 px-6">
+    <h2 class="text-3xl font-bold text-center mb-6">FAQ</h2>
+    <div class="max-w-2xl mx-auto space-y-4">
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="cursor-pointer font-semibold">Wie lange dauert die Lieferung?</summary>
+        <p class="mt-2">In der Regel 5–7 Werktage nach Absprache.</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="cursor-pointer font-semibold">Kann ich mein eigenes Motiv hochladen?</summary>
+        <p class="mt-2">Ja, direkt im Kontaktformular ist ein Dateiupload möglich.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Kontaktformular -->
+  <section id="kontakt" class="bg-[#1F1F1F] py-12 px-6">
+    <h2 class="text-3xl font-bold text-center mb-6">Kontakt</h2>
+    <form name="kontakt" method="POST" data-netlify="true" enctype="multipart/form-data" action="/danke.html" class="max-w-xl mx-auto space-y-4">
+      <input type="hidden" name="form-name" value="kontakt">
+      <input type="text" name="name" placeholder="Name" required class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400">
+      <input type="email" name="email" placeholder="E-Mail" required class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400">
+      <textarea name="message" placeholder="Deine Nachricht" required class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400"></textarea>
+      <input type="file" name="upload" class="w-full p-3 rounded bg-gray-800 text-white">
+      <button type="submit" class="bg-[#4A6C82] hover:bg-[#3a5666] px-6 py-3 rounded-full text-white">Absenden</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1F1F1F] text-center py-4 text-sm text-gray-400">
+    <p>&copy; 2025 DRUX | <a href="impressum.html" class="underline">Impressum</a> | <a href="datenschutz.html" class="underline">Datenschutz</a></p>
+  </footer>
+</body>
+</html>
