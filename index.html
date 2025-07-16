@@ -261,7 +261,9 @@
   <p class="mt-4">&copy; 2025 DRUX. Alle Rechte vorbehalten.</p>
 </footer>
 
-<form name="kontakt" netlify hidden>
+<!-- Dummy-Formular für Netlify-Erkennung -->
+<form name="kontakt" method="POST" data-netlify="true" enctype="multipart/form-data" hidden>
+  <input type="hidden" name="form-name" value="kontakt" />
   <input type="text" name="name" />
   <input type="email" name="email" />
   <textarea name="message"></textarea>
