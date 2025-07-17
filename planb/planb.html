@@ -38,10 +38,16 @@
       font-weight: 600;
     }
     .hero {
+      width: 100vw;                   /* Volle Viewport-Breite */
+      height: 100vh;                  /* Volle Viewport-Höhe */
       background: url('planback.avif') center/cover no-repeat fixed;
-      color: white;
-      text-align: center;
-      padding: 8rem 2rem;
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
     }
     .hero h1 {
       font-size: 3rem;
