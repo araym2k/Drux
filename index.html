@@ -170,17 +170,17 @@
 <!-- Hintergrundbereich ab FAQ -->
 <div class="bg-[url('/hg2.jpg')] bg-cover bg-center bg-fixed text-white">
   
-  <section id="faq" class="bg-black/70 py-20 px-6 text-white text-center">
+ <!-- Das hier ist dein FAQ-Abschnitt mit funktionierender Animation -->
+<section id="faq" class="bg-black/70 py-20 px-6 text-white text-center">
   <h2 class="text-3xl font-bold mb-10">Häufige Fragen</h2>
 
   <div class="max-w-4xl mx-auto space-y-4 text-left" x-data="{ selected: null }">
-    
-    <!-- Frage 1: Lieferung -->
-    <div class="border border-[#4A6C82] rounded-xl">
+
+    <!-- Frage 1 -->
+    <div class="border border-[#4A6C82] rounded-xl overflow-hidden">
       <button @click="selected !== 1 ? selected = 1 : selected = null"
               class="w-full px-6 py-4 flex justify-between items-center text-[#8BA6B7] hover:text-white">
         <span class="flex items-center space-x-3 text-lg font-semibold">
-          <!-- LKW-Icon -->
           <svg class="w-6 h-6 text-[#8BA6B7]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5V6a1 1 0 011-1h10l4 4v7.5a1 1 0 01-1 1H4a1 1 0 01-1-1z" />
             <circle cx="6.5" cy="17.5" r="1.5" fill="currentColor" />
@@ -189,7 +189,7 @@
           <span>Wie lange dauert die Lieferung?</span>
         </span>
         <svg :class="selected === 1 ? 'rotate-180' : ''" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M19 9l-7 7-7-7"/>
+          <path d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       <div x-show="selected === 1" x-collapse class="px-6 pb-4 text-gray-300">
@@ -197,6 +197,9 @@
       </div>
     </div>
 
+    <!-- Weitere Fragen analog mit selected === 2, 3, usw. -->
+
+  </div>
         <!-- Frage 2: Eigene Designs -->
     <div class="border border-[#4A6C82] rounded-xl">
       <button @click="selected !== 2 ? selected = 2 : selected = null"
