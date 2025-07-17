@@ -28,30 +28,45 @@
       background-color: #fff;
     }
 
+    
+    
     header {
-      background: transparent;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr;
       align-items: center;
-      z-index: 1000;
-      color: white;
+      padding: 1rem 2rem;
+      min-height: 9.6rem;
+      background: transparent;
     }
+    
+    
 
     nav ul {
+  
+
       display: flex;
       list-style: none;
       gap: 1.5rem;
     }
 
     nav a {
+  transform: translateY(-1.5rem);
+  transform: translateY(-1.5rem);
       color: white;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a {
+  transform: translateY(-1.5rem);
+  transform: translateY(-1.5rem);
+  vertical-align: middle;
+}
+
+nav a:hover {
+      color: #ffd500;
     }
 
     .hero {
@@ -83,21 +98,22 @@
     }
 
     .hero .subline {
+  margin-top: 2rem;
       font-size: 1.25rem;
       font-weight: 400;
-      margin-top: 1rem;
+      transform: translateY(-1.5rem);
     }
 
     .hero .cta {
       font-size: 2.2rem;
       font-weight: 500;
-      margin-top: 1rem;
+      transform: translateY(-1.5rem);
       color: #ffd500;
     }
 
     .cta-button {
       display: inline-block;
-      margin-top: 1.5rem;
+      transform: translateY(-1.5rem);
       padding: 0.8rem 1.6rem;
       font-size: 1rem;
       font-weight: 600;
@@ -216,27 +232,293 @@
       font-size: 0.9rem;
     }
   
+    
+    
+    .logo {
+      height: 9.6rem;
+      max-height: 9.6rem;
+      display: block;
+    }
+    
+    
+
+
+    nav {
+  position: relative;
+  top: -0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      justify-self: end;
+    }
+
+
+    .header-inner {
+  width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      height: 9.6rem;
+    }
+
     .logo {
       height: 9.6rem;
       object-fit: contain;
     }
 
+    nav ul {
+  
+
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    nav a {
+  transform: translateY(-1.5rem);
+  transform: translateY(-1.5rem);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd500;
+    }
+
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    nav {
+  position: relative;
+  top: -0.8rem;
+      display: flex;
+      height: 100%;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    nav a {
+  transform: translateY(-1.5rem);
+  transform: translateY(-1.5rem);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd500;
+    }
+
+
+
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9.6rem;
+    padding: 0 2rem;
+    background: transparent;
+  }
+
+  .logo {
+    height: 9.6rem;
+    object-fit: contain;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+  transform: translateY(-1.5rem);
+  transform: translateY(-1.5rem);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #ffd500;
+  }
+
+  .nav-inner {
+    transform: translateY(-1.5rem);
+  }
+
+
+  .angebot-banner {
+    background-color: #2D2E2D;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+
+  .angebot-section {
+    background-color: #2D2E2D;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .angebot-section h2 {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+
+
+  
+  .angebot-liste-section {
+    background-color: #595959;
+    padding: 2rem 1rem 5rem 1rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+
+  .angebot-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .angebot-item {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    font-weight: 500;
+  }
+
+
+  
+
+
+
+
+
+
+
+.team-section {
+  background-color: #2D2E2D;
+  color: white;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+  padding: 3rem 2rem;
+
+  margin-top: 0;}
+
+
+
+
+
+
+
+
+
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    text-align: center;
+    max-width: 260px;
+  }
+
+  .team-member img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .team-member h3 {
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .team-member p {
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+
+  .fullwidth-wrapper {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+
+  .team-section {
+    background-color: #2D2E2D;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  
+  margin-top: 0;}
+
 </style>
 </head>
 <body>
 
-  <header>
-    <img src="planblogo.webp" alt="Plan mit B Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="#hero">Start</a></li>
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#angebot">Angebot</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+  
+    <header class="main-header">
+  <img src="planblogo.webp" alt="Plan mit B Logo" class="logo">
+  <nav>
+  <div class="nav-inner">
+    <ul>
+      <li><a href="#hero">Start</a></li>
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#angebot">Angebot</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+  </div>
+</nav>
+</header>
+    
 
   <section class="hero" id="hero">
     <div class="hero-content">
@@ -244,8 +526,10 @@
       <p class="subline">Dein individueller Trainingsplan auf dich und deine Ziele abgestimmt.</p>
       <p class="cta">Melde dich noch heute zu einem kostenlosen Beratungsgespräch an!</p>
       <a href="#kontakt" class="cta-button">Kontaktier uns</a>
-    </div>
-  </section>
+      </div>
+</div>
+</section>
+</div>
 
   <div class="fixed-bg bg1"></div>
     <div class="divider"></div>
@@ -254,22 +538,34 @@
     <div class="overlay-textbox">
       <h2>Über uns</h2>
       <p>Wir unterstützen dich mit individuellen Trainingsplänen und persönlicher Betreuung, um deine Ziele zu erreichen – mit Plan B!</p>
-    </div>
-  </section>
+      </div>
+</div>
+</section>
 
   <section id="angebot">
-    <h2>Unser Angebot</h2>
-    <div class="angebot-list">
+    
+<div class="angebot-section">
+  <h2>Unser Angebot</h2>
+  <div class="angebot-banner">
+    <p>Trainingspläne, Betreuung, Kurse – alles was du brauchst.</p>
+  </div>
+</div>
+
+    <div class="angebot-liste-section">
+  <div class="angebot-list">
       <div class="angebot-item">Kostenloses Beratungsgespräch</div>
       <div class="angebot-item">Individuelle Trainingspläne</div>
       <div class="angebot-item">Wöchentliche Videoauswertung</div>
       <div class="angebot-item">Kostenloses Probetraining</div>
       <div class="angebot-item">Langfristige Planung</div>
       <div class="angebot-item">Gruppenschnupperkurse</div>
-    </div>
-  </section>
+      </div>
+</div>
+</section>
 
-  <section id="team">
+  <div class="fullwidth-wrapper">
+<div class="team-section">
+<section id="team">
     <h2>Unser Team</h2>
     <div class="team">
       <div class="team-member">
@@ -282,8 +578,9 @@
         <h3>Marie Böhmig</h3>
         <p>„Ich möchte, dass sich jede*r bei uns wohlfühlt.“</p>
       </div>
-    </div>
-  </section>
+      </div>
+</div>
+</section>
 
   <section id="kontakt">
     <h2>Kontaktformular</h2>
