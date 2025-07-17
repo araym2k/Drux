@@ -309,13 +309,20 @@
 <!-- 🔧 Jetzt kommt der Micromodal Code -->
 <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script>
-  Micromodal.init();
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof MicroModal !== "undefined") {
+      MicroModal.init();
 
-  function openModal(src) {
-    document.getElementById('modal-img').src = src;
-    Micromodal.show('lightbox');
-  }
+      window.openModal = function (src) {
+        document.getElementById('modal-img').src = src;
+        MicroModal.show('lightbox');
+      };
+    } else {
+      console.error("Micromodal ist nicht verfügbar.");
+    }
+  });
 </script>
+
 
   
   </body>
