@@ -6,7 +6,7 @@
   <title>Plan mit B</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,28 +14,33 @@
       box-sizing: border-box;
       font-family: 'Open Sans', sans-serif;
     }
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
     body {
       line-height: 1.6;
       color: #2D2E2D;
       background-color: #fff;
     }
     header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: transparent;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between; /* Logo links, Menü rechts */
-  align-items: center;
-  z-index: 1000;
-  color: white;
-}
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      color: white;
+    }
     nav ul {
       display: flex;
       list-style: none;
-      gap: 1rem;
+      gap: 1.5rem;
     }
     nav a {
       color: white;
@@ -43,31 +48,41 @@
       font-weight: 600;
     }
     .hero {
-      width: 100vw;                   /* Volle Viewport-Breite */
-      height: 100vh;                  /* Volle Viewport-Höhe */
-      background: url('planback.avif') center/cover no-repeat fixed;
+      width: 100vw;
+      height: 100vh;
+      background: url('planback.avif') center center / cover no-repeat fixed;
       display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-        max-width: none;
-  margin: 0;
+      justify-content: flex-start;
+      align-items: flex-start;
+      color: white;
+      padding: 10vh 7vw; /* weiter nach rechts gerückt */
+      text-align: left;
+      max-width: none;
+      margin: 0;
+    }
+    .hero-content {
+      max-width: 720px;
     }
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 4.2rem; /* ein Drittel größer */
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
     }
-    .btn {
-      background: #2D2E2D;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: bold;
+    .hero h1 .line-break {
+      display: block;
+    }
+    .hero .subline {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .hero .cta {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      line-height: 1.5;
     }
     section {
       padding: 4rem 2rem;
@@ -115,7 +130,7 @@
 </head>
 <body>
   <header>
-    <div>Plan mit B</div>
+    <div class="logo">Plan mit B</div>
     <nav>
       <ul>
         <li><a href="#hero">Start</a></li>
@@ -128,9 +143,11 @@
   </header>
 
   <section class="hero" id="hero">
-    <h1>Der Plan zum Ziel!</h1>
-    <p>Individuelle Trainingspläne, die dich weiterbringen.</p>
-    <a href="#kontakt" class="btn">Kostenloses Beratungsgespräch</a>
+    <div class="hero-content">
+      <h1>Der Plan zum <span class="line-break">Ziel!</span></h1>
+      <p class="subline">Dein individueller Trainingsplan auf dich und deine Ziele abgestimmt.</p>
+      <p class="cta">Melde dich noch heute zu einem kostenlosen Beratungsgespräch an!</p>
+    </div>
   </section>
 
   <section id="about">
@@ -154,12 +171,12 @@
     <h2>Unser Team</h2>
     <div class="team">
       <div class="team-member">
-        <img src="https://www.planmitb.de/assets/images/steve.jpg" alt="Steve Burkhardt">
+        <img src="steve.avif" alt="Steve Burkhardt">
         <h3>Steve Burkhardt</h3>
         <p>„Die Individualität eines jeden steht für mich im Vordergrund.“</p>
       </div>
       <div class="team-member">
-        <img src="https://www.planmitb.de/assets/images/marie.jpg" alt="Marie Böhmig">
+        <img src="marie.avif" alt="Marie Böhmig">
         <h3>Marie Böhmig</h3>
         <p>„Ich möchte, dass sich jede*r bei uns wohlfühlt.“</p>
       </div>
