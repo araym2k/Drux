@@ -20,13 +20,15 @@
       background-color: #fff;
     }
     header {
-      background: #2D2E2D;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  background: transparent;        /* kein schwarzer Hintergrund */
+  position: absolute;            /* schwebt über .hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  color: white;
+}
     nav ul {
       display: flex;
       list-style: none;
