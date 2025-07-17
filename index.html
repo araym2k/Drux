@@ -319,13 +319,14 @@
 </form>
 
 <!-- Lightbox Modal -->
-<div class="modal micromodal-slide" id="lightbox" aria-hidden="true" hidden>
+<!-- KEIN hidden! -->
+<div class="modal micromodal-slide" id="lightbox" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <div class="modal__container max-w-4xl mx-auto p-4 bg-black rounded" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
-      <header class="modal__header flex justify-end">
+    <div class="modal__container bg-black p-4 rounded" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <header class="modal__header">
         <button class="modal__close text-white text-2xl" aria-label="Close modal" data-micromodal-close>×</button>
       </header>
-      <main class="modal__content">
+      <main class="modal__content" id="lightbox-content">
         <img id="modal-img" src="" class="w-full h-auto rounded" />
       </main>
     </div>
@@ -337,16 +338,18 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     if (typeof MicroModal !== "undefined") {
-      MicroModal.init();
+      MicroModal.init({
+        disableScroll: true,
+        awaitOpenAnimation: false,
+        awaitCloseAnimation: false,
+        debugMode: true
+      });
 
+      // Öffnet Bild
       window.openModal = function (src) {
-        const modal = document.getElementById('lightbox');
-        modal.removeAttribute('hidden'); // sicherstellen, dass es sichtbar ist
         document.getElementById('modal-img').src = src;
         MicroModal.show('lightbox');
       };
-    } else {
-      console.error("Micromodal nicht gefunden.");
     }
   });
 </script>
