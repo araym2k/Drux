@@ -177,12 +177,12 @@
 
   <div class="max-w-4xl mx-auto space-y-4 text-left" x-data="{ open: null }">
     
-    <!-- Frage 1 -->
+    <!-- Eine FAQ-Karte (Frage 1) -->
     <div class="border border-[#4A6C82] rounded-xl overflow-hidden">
       <button @click="open === 1 ? open = null : open = 1"
-        class="w-full px-6 py-4 flex justify-between items-center text-[#8BA6B7] hover:text-white font-semibold">
+        class="w-full px-6 py-4 flex justify-between items-center text-[#8BA6B7] hover:text-white font-semibold transition-colors">
         <span class="flex items-center gap-3">
-          <!-- Icon: LKW -->
+          <!-- Icon -->
           <svg class="w-6 h-6 text-[#8BA6B7]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M3 16.5V6a1 1 0 011-1h10l4 4v7.5a1 1 0 01-1 1H4a1 1 0 01-1-1z" />
@@ -191,12 +191,14 @@
           </svg>
           <span>Wie lange dauert die Lieferung?</span>
         </span>
-        <svg :class="open === 1 ? 'rotate-180' : ''" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
-          stroke-width="2" viewBox="0 0 24 24">
+        <!-- Pfeil -->
+        <svg :class="open === 1 ? 'rotate-180' : ''" class="w-5 h-5 transition-transform duration-300"
+          fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div x-show="open === 1" x-transition class="px-6 pb-4 text-gray-300">
+      <!-- Antwort -->
+      <div x-show="open === 1" x-transition.duration.300ms class="px-6 pb-4 text-gray-300">
         In der Regel 2–5 Werktage ab Druckfreigabe. Einzelstücke sind oft schneller da.
       </div>
     </div>
@@ -204,43 +206,44 @@
     <!-- Frage 2 -->
     <div class="border border-[#4A6C82] rounded-xl overflow-hidden">
       <button @click="open === 2 ? open = null : open = 2"
-        class="w-full px-6 py-4 flex justify-between items-center text-[#8BA6B7] hover:text-white font-semibold">
+        class="w-full px-6 py-4 flex justify-between items-center text-[#8BA6B7] hover:text-white font-semibold transition-colors">
         <span class="flex items-center gap-3">
-          <!-- Icon: Pinsel -->
+          <!-- Icon -->
           <svg class="w-6 h-6 text-[#8BA6B7]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M15.232 5.232l3.536 3.536m-2.036-6.036a2.5 2.5 0 013.536 3.536L7.5 18H3v-4.5L16.732 2.732z" />
           </svg>
           <span>Kann ich mein eigenes Design einsenden?</span>
         </span>
-        <svg :class="open === 2 ? 'rotate-180' : ''" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
-          stroke-width="2" viewBox="0 0 24 24">
+        <svg :class="open === 2 ? 'rotate-180' : ''" class="w-5 h-5 transition-transform duration-300"
+          fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div x-show="open === 2" x-transition class="px-6 pb-4 text-gray-300">
+      <div x-show="open === 2" x-transition.duration.300ms class="px-6 pb-4 text-gray-300">
         Ja! Schick uns dein Motiv einfach über das Kontaktformular oder per Mail. Wir prüfen es kostenfrei.
       </div>
     </div>
 
    <!-- Frage 3 -->
+<!-- Frage 3: Textilien -->
 <div class="border border-[#4A6C82] rounded-xl overflow-hidden">
   <button @click="open === 3 ? open = null : open = 3"
-    class="w-full px-6 py-4 flex justify-between items-center text-[#8BA6B7] hover:text-white font-semibold">
+    class="w-full px-6 py-4 flex justify-between items-center text-[#8BA6B7] hover:text-white font-semibold transition-colors">
     <span class="flex items-center gap-3">
       <!-- Icon: T-Shirt -->
       <svg class="w-6 h-6 text-[#8BA6B7]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round"
-              d="M4 4l4 2 4-2 4 2 4-2v16H4V4z" />
+          d="M4 4l4 2 4-2 4 2 4-2v16H4V4z" />
       </svg>
       <span>Welche Textilien verwendet ihr?</span>
     </span>
-    <svg :class="open === 3 ? 'rotate-180' : ''" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
-      stroke-width="2" viewBox="0 0 24 24">
+    <svg :class="open === 3 ? 'rotate-180' : ''" class="w-5 h-5 transition-transform duration-300"
+      fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <path d="M19 9l-7 7-7-7" />
     </svg>
   </button>
-  <div x-show="open === 3" x-transition class="px-6 pb-4 text-gray-300">
+  <div x-show="open === 3" x-transition.duration.300ms class="px-6 pb-4 text-gray-300">
     Wir drucken auf hochwertige Shirts (z. B. Stanley/Stella) mit guter Passform und Langlebigkeit.
   </div>
 </div>
