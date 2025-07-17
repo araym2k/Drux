@@ -55,7 +55,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       color: white;
-      padding: 10vh 5vw;
+      padding: 10vh 7vw; /* weiter nach rechts gerückt */
       text-align: left;
       max-width: none;
       margin: 0;
@@ -64,10 +64,13 @@
       max-width: 720px;
     }
     .hero h1 {
-      font-size: 3.2rem;
+      font-size: 4.2rem; /* ein Drittel größer */
       font-weight: 700;
       margin-bottom: 1.2rem;
       line-height: 1.2;
+    }
+    .hero h1 .line-break {
+      display: block;
     }
     .hero .subline {
       font-size: 1.25rem;
@@ -141,7 +144,7 @@
 
   <section class="hero" id="hero">
     <div class="hero-content">
-      <h1>Der Plan zum Ziel!</h1>
+      <h1>Der Plan zum <span class="line-break">Ziel!</span></h1>
       <p class="subline">Dein individueller Trainingsplan auf dich und deine Ziele abgestimmt.</p>
       <p class="cta">Melde dich noch heute zu einem kostenlosen Beratungsgespräch an!</p>
     </div>
