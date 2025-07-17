@@ -20,12 +20,15 @@
       background-color: #fff;
     }
     header {
-  background: transparent;        /* kein schwarzer Hintergrund */
-  position: absolute;            /* schwebt über .hero */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  background: transparent;
   padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between; /* Logo links, Menü rechts */
+  align-items: center;
   z-index: 1000;
   color: white;
 }
