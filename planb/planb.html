@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plan mit B</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,16 +15,19 @@
       box-sizing: border-box;
       font-family: 'Open Sans', sans-serif;
     }
+
     html, body {
-      margin: 0;
-      padding: 0;
+      height: 100%;
+      width: 100%;
       overflow-x: hidden;
     }
+
     body {
       line-height: 1.6;
       color: #2D2E2D;
       background-color: #fff;
     }
+
     header {
       background: transparent;
       position: absolute;
@@ -37,69 +41,151 @@
       z-index: 1000;
       color: white;
     }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: 600;
     }
+
     .hero {
       width: 100vw;
-      height: 100vh;
+      height: 85vh;
       background: url('planback.avif') center center / cover no-repeat fixed;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       color: white;
-      padding: 10vh 7vw; /* weiter nach rechts gerückt */
+      padding: 10vh 7vw;
       text-align: left;
-      max-width: none;
       margin: 0;
+      max-width: none;
     }
+
     .hero-content {
       max-width: 720px;
     }
+
     .hero h1 {
-      font-size: 4.2rem; /* ein Drittel größer */
+      font-size: 4.2rem;
       font-weight: 700;
-      margin-bottom: 1.2rem;
       line-height: 1.2;
     }
-    .hero h1 .line-break {
+
+    .hero .line-break {
       display: block;
     }
+
     .hero .subline {
       font-size: 1.25rem;
       font-weight: 400;
-      margin-bottom: 1rem;
-      line-height: 1.6;
+      margin-top: 1rem;
     }
+
     .hero .cta {
-      font-size: 1.1rem;
+      font-size: 2.2rem;
       font-weight: 500;
       margin-top: 1rem;
-      line-height: 1.5;
+      color: #ffd500;
     }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.6rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #ffd500;
+      color: #2D2E2D;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e6c200;
+    }
+
+    .fixed-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .bg1 {
+      background-image: url('bg1.avif');
+    }
+
+    .scroll-anchor {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .divider {
+      height: 1cm;
+      width: 100%;
+      background-color: #f5f5f5;
+    }
+
+    .overlay-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 100vh;
+      background: url('bg2.avif') center center / cover no-repeat fixed;
+      padding: 4rem 5vw;
+    }
+
+    .overlay-textbox {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+
+    .overlay-textbox h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .overlay-textbox p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
     section {
       padding: 4rem 2rem;
       max-width: 1200px;
       margin: auto;
     }
+
     .angebot-list, .team {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
     }
+
     .angebot-item, .team-member {
       border: 1px solid #ccc;
       padding: 1rem;
       border-radius: 10px;
       text-align: center;
     }
+
     .team-member img {
       width: 100px;
       height: 100px;
@@ -107,6 +193,7 @@
       object-fit: cover;
       margin-bottom: 0.5rem;
     }
+
     form {
       display: flex;
       flex-direction: column;
@@ -114,12 +201,14 @@
       max-width: 500px;
       margin: auto;
     }
+
     input, textarea {
       padding: 0.7rem;
       border: 1px solid #aaa;
       border-radius: 5px;
       font-size: 1rem;
     }
+
     footer {
       background: #f5f5f5;
       text-align: center;
@@ -129,6 +218,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">Plan mit B</div>
     <nav>
@@ -147,12 +237,18 @@
       <h1>Der Plan zum <span class="line-break">Ziel!</span></h1>
       <p class="subline">Dein individueller Trainingsplan auf dich und deine Ziele abgestimmt.</p>
       <p class="cta">Melde dich noch heute zu einem kostenlosen Beratungsgespräch an!</p>
+      <a href="#kontakt" class="cta-button">Kontaktier uns</a>
     </div>
   </section>
 
-  <section id="about">
-    <h2>Über uns</h2>
-    <p>Wir unterstützen dich mit individuellen Trainingsplänen und persönlicher Betreuung, um deine Ziele zu erreichen – mit Plan B!</p>
+  <div class="fixed-bg bg1"></div>
+    <div class="divider"></div>
+
+  <section class="overlay-content" id="about">
+    <div class="overlay-textbox">
+      <h2>Über uns</h2>
+      <p>Wir unterstützen dich mit individuellen Trainingsplänen und persönlicher Betreuung, um deine Ziele zu erreichen – mit Plan B!</p>
+    </div>
   </section>
 
   <section id="angebot">
