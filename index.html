@@ -15,6 +15,32 @@
       body {
         font-family: 'Outfit', sans-serif;
       }
+       /* 🔵 Modal Styling */
+  .modal__container {
+    max-width: 90%;
+    max-height: 90vh;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+  }
+
+  .modal__content img {
+    max-height: 80vh;
+  }
     </style>
   </head>
   <body class="bg-black text-gray-900">
