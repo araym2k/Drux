@@ -70,20 +70,28 @@
     
     <!-- Header -->
    
-<header class="bg-[#4A6C82] text-white px-6 py-4 shadow">
-  <div class="max-w-6xl mx-auto flex flex-col items-center md:flex-row md:justify-between md:items-center">
-
-    <!-- Logo & Slogan -->
-    <div class="flex flex-col items-center md:items-start text-center md:text-left">
+<header class="bg-[#4A6C82] text-white px-6 py-4 shadow" x-data="{ open: false }">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    
+    <!-- Logo + Claim -->
+    <div class="flex items-center space-x-3">
       <h1 class="text-2xl font-bold flex items-center space-x-2">
         <span>DRU</span>
         <img src="druxx.png" alt="Logo X" class="h-9 w-auto inline-block" />
       </h1>
-      <p class="text-sm text-gray-300 mt-1">Design Dein Sein</p>
+      <p class="hidden sm:block text-sm text-gray-300">Design Dein Sein</p>
     </div>
 
-    <!-- Navigation -->
-    <nav class="mt-4 md:mt-0 flex flex-col items-center space-y-2 md:flex-row md:space-y-0 md:space-x-6 font-semibold"
+    <!-- Hamburger Button -->
+    <button @click="open = !open" class="sm:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden sm:flex space-x-6 font-semibold"
          style="font-family: 'Roboto', sans-serif; transform: scaleY(1.2); transform-origin: bottom;">
       <a href="#angebot" class="hover:text-gray-300">Angebot</a>
       <a href="#galerie" class="hover:text-gray-300">Galerie</a>
@@ -92,9 +100,20 @@
       <a href="#kundenstimmen" class="hover:text-gray-300">Stimmen</a>
       <a href="#faq" class="hover:text-gray-300">FAQ</a>
     </nav>
+  </div>
 
+  <!-- Mobile Navigation -->
+  <div x-show="open" x-transition class="sm:hidden mt-4 flex flex-col space-y-2 text-white font-semibold"
+       style="font-family: 'Roboto', sans-serif;">
+    <a href="#angebot" class="hover:text-gray-300">Angebot</a>
+    <a href="#galerie" class="hover:text-gray-300">Galerie</a>
+    <a href="#ueber-uns" class="hover:text-gray-300">Über uns</a>
+    <a href="#kontakt" class="hover:text-gray-300">Kontakt</a>
+    <a href="#kundenstimmen" class="hover:text-gray-300">Stimmen</a>
+    <a href="#faq" class="hover:text-gray-300">FAQ</a>
   </div>
 </header>
+
 
 
 
