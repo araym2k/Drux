@@ -12,6 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+<!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
     <style>
       body {
         font-family: 'Outfit', sans-serif;
@@ -122,21 +129,46 @@
 
   <!-- Galerie -->
 <section id="galerie" class="bg-black/70 py-20 px-6">
-  <h2 class="text-3xl font-bold text-center mb-10">Galerie</h2>
+  <h2 class="text-3xl font-bold text-center mb-10 text-white">Galerie</h2>
 
-  <div class="max-w-5xl mx-auto bg-blue-200/30 p-6 rounded-xl shadow-lg">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="shirt1.jpg" alt="Shirt 1" class="rounded shadow transition-transform duration-300 transform hover:scale-105 cursor-pointer"
-     onclick="openModal('shirt1.jpg')" />
-     <img src="galeriedrux.jpg" alt="Shirt 2" class="rounded shadow transition-transform duration-300 transform hover:scale-105 cursor-pointer" onclick="openModal('galeriedrux.jpg')" />
-
-      <img src="galeriedrache.jpg" alt="Shirt 3" class="rounded shadow transition-transform duration-300 transform hover:scale-105 cursor-pointer" onclick="openModal('galeriedrache.jpg')" />
-
-      <img src="drache.jpg" alt="Shirt 4" class="rounded shadow transition-transform duration-300 transform hover:scale-105 cursor-pointer" onclick="openModal('drache.jpg')" />
-
+  <div class="swiper mySwiper max-w-2xl mx-auto">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="shirt1.jpg" alt="Shirt 1" class="rounded-xl shadow-xl w-full" />
+      </div>
+      <div class="swiper-slide">
+        <img src="galeriedrux.jpg" alt="Shirt 2" class="rounded-xl shadow-xl w-full" />
+      </div>
+      <div class="swiper-slide">
+        <img src="galeriedrache.jpg" alt="Shirt 3" class="rounded-xl shadow-xl w-full" />
+      </div>
+      <div class="swiper-slide">
+        <img src="drache.jpg" alt="Shirt 4" class="rounded-xl shadow-xl w-full" />
+      </div>
     </div>
   </div>
 </section>
+
+  <!-- Swiper-Init-Skript -->    
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    cardsEffect: {
+      perSlideOffset: 8,
+      perSlideRotate: 2,
+      rotate: true,
+      slideShadows: false,
+    },
+  });
+</script>
+      
 
       <!-- Welle als Trennung nach der Galerie -->
 <div class="w-full overflow-hidden leading-[0] rotate-180">
