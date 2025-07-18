@@ -67,27 +67,35 @@
 </style>
   </head>
   <body class="bg-black text-gray-900">
+    
     <!-- Header -->
-   <header class="bg-[#4A6C82] text-white px-8 p-4 shadow flex justify-between items-center">
-      <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <div>
-          <h1 class="text-2xl px-8 font-bold flex items-center space-x-2">
-          <span>DRU</span>
-          <img src="druxx.png" alt="Logo X" class="h-9 w-auto inline-block" />
-        </h1>
-          <p class="text-sm text-gray-300 -mt-1">Design Dein Sein</p>
-        </div>
-       <nav class="space-x-6 inline-block" style="font-family: 'Roboto', sans-serif; transform: scaleY(1.3); transform-origin: bottom; font-weight: 600;">
+   
+    <header class="bg-[#4A6C82] text-white shadow">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center">
+    
+    <!-- Logo und Claim -->
+    <div class="flex flex-col md:flex-row md:items-center">
+      <h1 class="text-2xl font-bold flex items-center space-x-2">
+        <span>DRU</span>
+        <img src="druxx.png" alt="Logo X" class="h-9 w-auto" />
+      </h1>
+      <p class="text-sm text-gray-300 md:ml-4 -mt-1">Design Dein Sein</p>
+    </div>
 
-          <a href="#angebot" class="hover:text-gray-300">Angebot</a>
-          <a href="#galerie" class="hover:text-gray-300">Galerie</a>
-          <a href="#ueber-uns" class="hover:text-gray-300">Über uns</a>
-          <a href="#kontakt" class="hover:text-gray-300">Kontakt</a>
-          <a href="#kundenstimmen" class="hover:text-gray-300">Stimmen</a>
-          <a href="#faq" class="hover:text-gray-300">FAQ</a>
-        </nav>
-      </div>
-    </header>
+    <!-- Navigation -->
+    <nav class="mt-4 md:mt-0 space-y-2 md:space-y-0 md:space-x-6 flex flex-col md:flex-row items-start md:items-center text-sm font-semibold"
+         style="font-family: 'Roboto', sans-serif; transform: scaleY(1.2); transform-origin: bottom;">
+      <a href="#angebot" class="hover:text-gray-300">Angebot</a>
+      <a href="#galerie" class="hover:text-gray-300">Galerie</a>
+      <a href="#ueber-uns" class="hover:text-gray-300">Über uns</a>
+      <a href="#kontakt" class="hover:text-gray-300">Kontakt</a>
+      <a href="#kundenstimmen" class="hover:text-gray-300">Stimmen</a>
+      <a href="#faq" class="hover:text-gray-300">FAQ</a>
+    </nav>
+
+  </div>
+</header>
+
 
     <!-- Welle oben vor dem Hintergrundbildbereich -->
 <div class="w-full overflow-hidden leading-[0] rotate-180">
