@@ -21,15 +21,7 @@
     
     <style>
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn ease 1.2s forwards;
-}
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
 
       
   html {
@@ -40,6 +32,22 @@
       body {
         font-family: 'Outfit', sans-serif;
       }
+
+<!-- 🔄 Ladebildschirm -->
+<div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-700">
+  <img src="druxx.png" alt="Logo lädt..." class="w-24 h-24 animate-pulse" />
+</div>
+
+      .fade-in {
+  opacity: 0;
+  animation: fadeIn ease 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+      
        /* 🔵 Modal Styling */
  .modal__overlay {
     position: fixed;
@@ -584,6 +592,15 @@
         MicroModal.show('lightbox');
       };
     }
+  });
+</script>
+
+<!-- 🔧 JavaScript zum Ausblenden -->
+    <script>
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('loader');
+    loader.classList.add('opacity-0');
+    setTimeout(() => loader.style.display = 'none', 700);
   });
 </script>
 
