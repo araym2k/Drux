@@ -329,73 +329,94 @@
     
 
 <!-- Kontaktformular -->
-  <section id="kontakt" class="bg-black/70 py-20 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-10">Kontakt</h2>
+<section id="kontakt" class="bg-black/70 py-20 px-6 text-center text-white">
+  <h2 class="text-3xl font-bold mb-10">Kontakt</h2>
+  <p class="mb-6 max-w-xl mx-auto text-gray-300">
+    Du möchtest ein T-Shirt oder anderes Textil bedrucken lassen? Fülle das Formular aus, um uns deine Anfrage zu senden.
+    Du kannst auch ein Bild hochladen – wir prüfen kostenlos, ob es für den Druck geeignet ist.
+  </p>
 
-  <form
-    name="kontakt"
-    method="POST"
-    data-netlify="true"
-    enctype="multipart/form-data"
-    action="/danke.html"
-    class="max-w-xl mx-auto space-y-6"
-  >
-    <!-- Pflicht für Netlify-Erkennung -->
+  <form action="/danke" method="POST" name="kontakt" data-netlify="true" enctype="multipart/form-data" class="max-w-xl mx-auto space-y-6">
+    <!-- Pflicht für Netlify -->
     <input type="hidden" name="form-name" value="kontakt" />
 
     <!-- Name -->
     <div>
-      <label for="name" class="block mb-2 font-medium">Name</label>
+      <label for="name" class="block mb-2 font-medium text-left">Name</label>
       <input
+        type="text"
         id="name"
         name="name"
-        type="text"
         required
-        class="w-full border border-gray-300 rounded-xl p-3"
+        class="w-full border border-gray-300 rounded-xl p-3 text-black"
       />
     </div>
 
     <!-- E-Mail -->
     <div>
-      <label for="email" class="block mb-2 font-medium">E-Mail</label>
+      <label for="email" class="block mb-2 font-medium text-left">E-Mail</label>
       <input
+        type="email"
         id="email"
         name="email"
-        type="email"
         required
-        class="w-full border border-gray-300 rounded-xl p-3"
+        class="w-full border border-gray-300 rounded-xl p-3 text-black"
       />
     </div>
 
-    <!-- Datei-Upload -->
+    <!-- Produkt Dropdown -->
     <div>
-      <label for="upload" class="block mb-2 font-medium">Datei anhängen (PNG, JPG, PDF)</label>
+      <label for="produkt" class="block mb-2 font-medium text-left">
+        Was möchtest du bedrucken lassen?
+      </label>
+      <select
+        id="produkt"
+        name="produkt"
+        required
+        class="w-full border border-gray-300 rounded-xl p-3 text-black"
+      >
+        <option value="">Bitte wählen</option>
+        <option value="T-Shirt">T-Shirt</option>
+        <option value="Hoodie">Hoodie</option>
+        <option value="Tasche">Tasche</option>
+        <option value="Sonstiges">Sonstiges</option>
+      </select>
+    </div>
+
+    <!-- Datei Upload -->
+    <div>
+      <label for="upload" class="block mb-2 font-medium text-left">
+        Motiv hochladen (PNG, JPG, PDF)
+      </label>
       <input
+        type="file"
         id="upload"
         name="upload"
-        type="file"
         accept=".jpg,.jpeg,.png,.pdf"
-        class="w-full border border-gray-300 rounded-xl p-3"
+        class="w-full border border-gray-300 rounded-xl p-3 text-black"
       />
+      <p class="text-sm text-gray-400 mt-1 text-left">
+        Optional: Lade hier dein Wunschmotiv hoch. Wir prüfen kostenlos, ob es druckbar ist.
+      </p>
     </div>
 
     <!-- Nachricht -->
     <div>
-      <label for="message" class="block mb-2 font-medium">Nachricht</label>
+      <label for="message" class="block mb-2 font-medium text-left">Deine Nachricht</label>
       <textarea
         id="message"
         name="message"
         required
-        class="w-full border border-gray-300 rounded-xl p-3 h-32"
+        class="w-full border border-gray-300 rounded-xl p-3 h-32 text-black"
       ></textarea>
     </div>
 
-    <!-- DSGVO Checkbox -->
-    <div class="text-sm text-gray-600">
+    <!-- DSGVO -->
+    <div class="text-sm text-gray-300 text-left">
       <label class="inline-flex items-start space-x-2">
         <input type="checkbox" required class="mt-1" />
         <span>
-          Ich habe die <a href="/datenschutz.html" class="underline">Datenschutzerklärung</a> gelesen und akzeptiere sie.
+          Ich habe die <a class="underline" href="/datenschutz">Datenschutzerklärung</a> gelesen und akzeptiere sie.
         </span>
       </label>
     </div>
@@ -403,12 +424,13 @@
     <!-- Absenden -->
     <button
       type="submit"
-      class="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition"
+      class="bg-[#4A6C82] text-white px-6 py-3 rounded-xl hover:bg-[#395164] transition"
     >
       Absenden
     </button>
   </form>
 </section>
+
 
 
 </div>
