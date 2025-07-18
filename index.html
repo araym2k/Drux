@@ -20,6 +20,17 @@
 
     
     <style>
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
       
   html {
     scroll-behavior: smooth;
@@ -72,7 +83,7 @@
   }
 </style>
   </head>
-  <body class="bg-black text-gray-900">
+  <body class="bg-black text-gray-900" fade-in">
     
     <!-- Header -->
    
