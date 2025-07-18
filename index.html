@@ -133,9 +133,9 @@
 
   <div class="swiper mySwiper max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="shirt1.jpg" alt="Shirt 1" class="rounded-xl shadow-xl w-full" />
-      </div>
+      <div class="swiper-slide w-64">
+  <img src="shirt1.jpg" class="w-full rounded-xl shadow-xl" />
+</div>
       <div class="swiper-slide">
         <img src="galeriedrux.jpg" alt="Shirt 2" class="rounded-xl shadow-xl w-full" />
       </div>
@@ -152,21 +152,25 @@
   <!-- Swiper-Init-Skript -->    
 <script>
   const swiper = new Swiper(".mySwiper", {
-    effect: "cards",
+    effect: "coverflow",
     grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
     loop: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
-    cardsEffect: {
-      perSlideOffset: 10,
-      perSlideRotate: 2,
-      rotate: true,
+    coverflowEffect: {
+      rotate: 30,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
       slideShadows: false,
     },
   });
 </script>
+
       
 
       <!-- Welle als Trennung nach der Galerie -->
