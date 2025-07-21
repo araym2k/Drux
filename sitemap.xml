@@ -1,58 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Startseite -->
   <url>
-    <loc>https://drux.netlify.app/index.html</loc>
+    <loc>https://drux.netlify.app/</loc>
     <lastmod>2025-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+</urlset>
 
-  <!-- Abschnitt: Angebot -->
-  <url>
-    <loc>https://drux.netlify.app/#angebot</loc>
-    <lastmod>2025-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Abschnitt: Galerie -->
-  <url>
-    <loc>https://drux.netlify.app/#galerie</loc>
-    <lastmod>2025-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Abschnitt: Über uns -->
-  <url>
-    <loc>https://drux.netlify.app/#ueber-uns</loc>
-    <lastmod>2025-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Abschnitt: Kundenstimmen -->
-  <url>
-    <loc>https://drux.netlify.app/#kundenstimmen</loc>
-    <lastmod>2025-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Abschnitt: FAQ -->
-  <url>
-    <loc>https://drux.netlify.app/#faq</loc>
-    <lastmod>2025-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Abschnitt: Kontakt -->
-  <url>
-    <loc>https://drux.netlify.app/#kontakt</loc>
-    <lastmod>2025-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
