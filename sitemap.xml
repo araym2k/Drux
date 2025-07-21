@@ -3,7 +3,7 @@
 
   <!-- Startseite -->
   <url>
-    <loc>https://drux.netlify.app/</loc>
+    <loc>https://drux.netlify.app/index.html</loc>
     <lastmod>2025-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
